@@ -14,7 +14,7 @@ public class MainProject {
 		} catch (BancaException e) {
 			System.out.println("ERRORE!");
 		}
-		
+
 	}
 
 	public static void esercizioUno() {
@@ -79,36 +79,36 @@ public class MainProject {
 				}
 			} catch (NumberFormatException e) {
 				System.out.println("Valore non valido inserire un numero");
-			}catch(ArithmeticException e){
+			} catch (ArithmeticException e) {
 				System.out.println("Non puoi inserire '0' come litri consumati");
-			}catch(Exception e){
+			} catch (Exception e) {
 				System.out.println("ERRORE! ");
 			}
 		} while (!uscitaEsercizioDue);
 	}
 
-	public static void esercizioTre()throws BancaException{
+	public static void esercizioTre() throws BancaException {
 
 		ContoCorrente conto1 = new ContoCorrente("Grossi Mario", 20000.0);
 
 		System.out.println("Saldo conto: " + conto1.restituisciSaldo());
 
 		try {
-			conto1.preleva(1750.5);
+			conto1.preleva(550000.0);
 
 			System.out.println("Saldo conto: " + conto1.restituisciSaldo());
 		} catch (BancaException e) {
 			System.out.println("Errore durante il prelievo: " + e);
+			System.out.println("Saldo conto: " + conto1.restituisciSaldo());
 			e.printStackTrace();
 		}
 
-		ContoOnline conto2 =new ContoOnline("Rossi Luigi", 50350.0, 1500);
-		
+		ContoOnline conto2 = new ContoOnline("Rossi Luigi", 50350.0, 1500);
 
 		conto2.stampaSaldo();
 
 		try {
-			conto2.preleva(1000);
+			conto2.preleva(70000);
 
 			conto2.stampaSaldo();
 
@@ -116,6 +116,6 @@ public class MainProject {
 			System.out.println("Errore durante il prelievo: " + e);
 			e.printStackTrace();
 		}
-	}
-	}
 
+	}
+}

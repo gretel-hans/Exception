@@ -4,7 +4,7 @@ public class BancaException extends Exception {
 
     String message;
     public BancaException(String message) {
-        super();
+        super(message);
         this.message = message;
     }
 

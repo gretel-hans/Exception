@@ -12,7 +12,7 @@ public class MainProject {
 		try {
 			esercizioTre();
 		} catch (BancaException e) {
-			System.out.println("ERRORE!");
+			System.out.println("ERRORE! "+e);
 		}
 
 	}
